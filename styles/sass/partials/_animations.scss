@@ -1,0 +1,34 @@
+// fade-in animation
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// fade-out animation
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+h1, h2, h3, h4 {
+    animation: fade-in 1s;
+    font-weight: 500;
+}
+
+hr, p, img, ul, li, a, blockquote, form, input, textarea, button, label, select, option, table, th, td {
+    animation: fade-in 1s;
+}
+
+.banner-1, .banner-2 {
+    animation: fade-in 1s;
+}

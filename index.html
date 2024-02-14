@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- metadata-->
+    <title>Nina Milanovski</title>
+    <meta name="title" content="Nina Milanovski" />
+    <meta property="og:title" content="Nina Milanovski" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content="" /> -->
+    <!-- <meta name="description" content=""> -->
+    <!-- <meta name="og:description" content=""> -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="author" content="Nina Milanovski" />
+    <!-- <meta name="keywords" content="" /> -->
+
+    <!-- favicons and metadata banner -->
+    <!-- <link rel="apple-touch-icon-precomposed" href="/assets/icons/favicon-touch.png">
+    <link rel="shortcut icon" href="/assets/icons/favicon-192.png" sizes="192x192" >
+    <link rel="icon" href="/assets/icons/favicon.ico" type="image/icon type"/> -->
+
+    <!-- preloaded typefaces -->
+    <link rel="preload" href="./assets/fonts/Jost/Jost-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./assets/fonts/Jost/Jost-Italic-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+
+    <!-- preloaded icons -->
+    <link rel="preload" href="./assets/icons/arrow-up.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/menu-lines.svg" as="image" type="image/svg+xml" />
+
+    <!-- styles import -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+  </head>
+
+  <body>
+
+    <!-- header section-->
+    <header>
+      <div class="wrapper"> 
+
+        <!-- nav section -->
+        <nav>
+          <!-- mobile hamburger nav button -->
+          <div class="hamburger-btn">
+            <button aria-label="Click to open navigation">
+              <img src="./assets/icons/menu-lines.svg" class="menu-icon" alt="mobile menu icon">
+            </button>
+          </div>
+          
+          <!-- pages list -->
+          <ul class="nav-list">
+            <li><span class="current">Home</span></li>
+            <li><a href="./portfolio">Portfolio</a></li>
+            <li><a href="./contact">Contact</a></li>
+          </ul class="nav-list">
+        </nav>
+
+        <!-- title section -->
+        <div class="title">
+          <div class="heading">
+            <h1>Nina Milanovski</h1>
+          </div>
+        </div>
+
+      </div> <!-- wrapper end -->
+    </header>
+
+    <!-- about section -->
+    <section class="about">
+      <div class="wrapper">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo error, impedit vel minima necessitatibus eligendi laboriosam earum! At sunt nemo id a, adipisci accusantium! Amet dignissimos et laborum veniam quas.</p>
+      </div> <!-- wrapper end -->
+    </section>
+
+    <!-- footer section -->
+    <footer>
+      <div class="wrapper">
+
+        <!-- scroll to top button -->
+        <div class="button scroll-to-top" title="Go back to top of page" tabindex="0" onKeyDown="app.scrollTopOnEnter(event.keyCode)">
+          <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
+          <p class="button-label">Back to top</p>
+          <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
+        </div>
+
+        <hr/>
+
+        <p>Website designed by <a href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Teagle</a>.
+        </p>
+
+      </div> <!-- wrapper end -->
+    </footer>
+
+    <!-- script imports -->
+    <script src="./scripts/jquery-3.7.0.min.js" type="text/javascript"></script>
+    <script src="./scripts/app.js" type="text/javascript"></script>
+
+  </body>
+</html>

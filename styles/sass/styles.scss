@@ -1,0 +1,400 @@
+@use 'partials/setup';
+@use 'partials/animations' as *;
+@use 'partials/variables' as *;
+@use 'partials/typography' as *;
+
+// default body styles
+body {
+    background-color: $white;
+    text-align: center;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    &.nav-open {
+        // responsive to mobile
+        @media only screen and (max-width: $tablet) {
+            overflow-y: hidden;
+        }
+    }
+}
+
+input, textarea {
+    background-color: $white;
+    border: none;
+    padding: 10px 15px;
+}
+
+textarea {
+    height: 150px;
+}
+
+.about {
+    background-color: rgba($color2, 0.8);
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+// wrapper styles
+.wrapper {
+    max-width: 1260px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+// button styles
+.button {
+    font-style: normal;
+    background-color: rgba($color2, 0.8);
+    color: $black;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.5s, font-style 0.5s;
+    &:hover {
+        font-style: italic;
+        background-color: rgba($color1, 0.6);
+
+        @media only screen and (max-width: $mobile) {
+            font-style: normal;
+            background-color: rgba($color2, 0.8);
+        }
+    }
+
+    &.scroll-to-top {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 50px;
+
+        img {
+            width: 20px;
+        }
+    }
+}
+
+// header styles
+header {
+    height: 350px;
+    position: relative;
+    nav {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        .hamburger-btn {
+            display: none;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+                li {
+                    a {
+                        padding: 5px 30px;
+                        &:hover {
+                            border-bottom: solid $black 3px;
+                            background-color: rgba($color1, 0.5);
+                            transition: background-color 0.75s;
+                        }
+                    }
+                    .current {
+                        padding: 5px 30px;
+                        border-bottom: solid $color1 3px;
+                    }
+                }
+            }
+        }
+    .title {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        max-width: 1200px;
+        transform: translate(-50%, -50%);
+        .heading {
+            h1 {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        padding: 50px 30px;
+        padding-bottom: 0;
+    }
+}
+
+.banner-1, .page-header {
+    display: flex;
+    align-items: center;
+    background-color: rgba($color1, 0.6);
+    .wrapper {
+        width: 80%;
+        h3 {
+            margin: 0;
+            padding: 40px 75px;
+        }
+    }
+}
+
+.banner-2 {
+    height: 350px;
+}
+
+.portfolio-main {
+    padding-bottom: 0;
+    .wrapper {
+        width: 85%;
+    }
+}
+
+.portfolio {
+    padding: 30px 0px;
+    background-color: rgba($color2, 0.8);
+    .wrapper {
+        width: 70%;
+    }
+    ul li {
+        margin: 10px 0;
+    }
+}
+
+.contact-main {
+    padding: 50px 0px;
+    padding-bottom: 0;
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+    }
+    p {
+        width: 30%;
+    }
+    form {
+        background-color: rgba($color2, 0.6);
+        padding: 20px;
+        margin: 30px 20px;
+        margin-top: 0;
+        width: 50%;
+        fieldset {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            border: none;
+            label, input {
+                width: 100%;
+                margin: 5px 0px;
+            }
+            p {
+                padding-top: 10px;
+                font-size: 0.9rem !important;
+                width: 100%;
+                text-align: right !important;
+            }
+            input {
+                margin-bottom: 15px;
+            }
+            textarea {
+                min-width: 100%;
+            }
+            .submit-button {
+                width: 100%;
+                display: flex;
+                justify-content: right;
+                margin-bottom: 5px;
+                .button {
+                    background-color: $white;
+                    border: none;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: rgba($color1, 0.6);
+
+                        @media only screen and (max-width: $tablet) {
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        hr {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+    
+    .footer-logo {
+        width: 250px;
+    }
+    margin: 40px;
+}
+
+@media only screen and (max-width: $tablet) {
+    header {
+        height: 300px;
+        .title {
+            .logo {
+                width: 120px;
+            }
+        }
+    }
+    .contact-main {
+        .wrapper {
+            flex-wrap: wrap;
+        }
+        padding: 25px;
+        p {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+        form {
+            margin: 5px;
+            width: 100%;
+        }
+    }
+}
+
+// screens smaller than $mobile
+@media only screen and (max-width: $mobile) {
+    .wrapper {
+        width: 95%;
+    }
+    header {
+        nav {
+            position: fixed;
+            z-index: 4;
+            width: 100vw;
+            .hamburger-btn {
+                z-index: 5;
+                display: initial;
+                position: sticky;
+                left: 0;
+                width: 100%;
+                button {
+                    position: relative;
+                    display: flex;
+                    border: none;
+                    background-color: $color1;
+                    color: $black;
+                    height: 55px;
+                    width: 100%;
+                    img {
+                        left: 10px;
+                        width: 40px;
+                        padding: 10px 5px;
+                        transition: transform 0.5s;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            .nav-list {
+                opacity: 0;
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                gap: 60px;
+                position: absolute;
+                top: 0;
+                height: 100vh;
+                min-height: 500px;
+                padding: 5% 0;
+                width: 100%;
+                background-color: $white;
+
+                * {
+                    animation: none;
+                }
+
+                li {
+                    .current {
+                        display: block;
+                        margin: 0 auto;
+                        width: 50%;
+                        border-width: 3px;
+                        padding: 10px 20px;
+                    }
+                    a {
+                        display: block;
+                        margin: 0 auto;
+                        width: 50%;
+                        padding: 10px 20px;
+                        background-color: rgba($color2, 0.8);
+                        &:hover {
+                            background-color: rgba($color2, 0.8);
+                            border: initial;
+                        }
+                    }
+                }
+            }
+            &.active {
+                .hamburger-btn {
+                    button {
+                        background-color: $color2;
+                        color: $black;
+                        img {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                .nav-list {
+                    display: flex !important;
+                    opacity: 1 !important;
+                }
+            }
+        }
+        .title {
+            padding: 0;
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+    .banner-1, .page-header {
+        min-height: 150px;
+        .wrapper {
+            width: 100%;
+            h3 {
+                padding: 40px;
+            }
+        }
+    }
+    .about {
+        .wrapper {
+            width: 90%;
+        }
+    }
+    .portfolio {
+        .wrapper {
+            width: 85%;
+        }
+    }
+    .portfolio-main {
+        .wrapper {
+            width: 90%;
+        }
+    }
+    footer {
+        margin: 40px 20px;
+    }
+}
