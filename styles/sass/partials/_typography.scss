@@ -21,27 +21,29 @@ $font2: 'Jost-Italic',
 sans-serif;
 
 a {
-  color: $black;
+  color: $color1;
   font-style: normal;
+  text-decoration: none;
 
   &:hover {
     transition: color 1s, font-style 1s;
     font-style: italic;
+    text-decoration: line-through;
     color: $color1;
   }
 
   @media only screen and (max-width: $mobile) {
     font-style: italic;
     &:hover {
-      color: $black;
+      color: $white;
     }
   }
 }
 
 hr {
-  background-color: rgba($color1, 0.8);
+  background-color: rgba($color2, 0.8);
   border-style: solid;
-  border-color: rgba($color1, 0.8);
+  border-color: rgba($color2, 0.8);
   height: 1px;
   box-shadow: none;
 }
@@ -55,9 +57,9 @@ body {
   letter-spacing: 0.4px;
   font-size: 18px;
   font-weight: 400;
-  color: $black;
+  color: $white;
   a {
-    color: $black;
+    color: $white;
   }
 
   @media only screen and (max-width: $tablet) {
@@ -73,34 +75,37 @@ h1, h2, h3, h4 {
   font-family: $font1;
   font-size: 1.2rem;
   text-decoration: none;
-  color: $white;
+  color: $black;
+  &:hover {
+    color: $white;
+  }
 }
 
 header {
   .heading {
-    text-align: center;
     h1 {
-        font-size: 3.25rem;
+        font-size: 2.5rem;
         font-weight: 400;
       }
     h2 {
-      font-family: $font2;
-      font-size: 2.5rem;
-      font-weight: 500;
+      font-style: italic;
+      font-size: 1.25rem;
+      font-weight: 300;
       line-height: 1;
     }
   }
   nav {
     ul li {
       font-family: $font1;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       .current {
+        color: $color1;
         font-style: italic;
       }
       a {
         text-decoration: none;
         &:hover {
-          color: $black;
+          color: $color1;
         }
         @media only screen and (max-width: $mobile) {
           font-style: normal;
@@ -185,6 +190,7 @@ header {
 }
 
 footer {
+  font-size: 1rem;
   font-family: $font1;
   font-weight: 400;
 }
@@ -196,7 +202,7 @@ footer {
         font-size: 2rem;
       }
       h2 {
-        font-size: 1.75rem;
+        font-size: 1rem;
       }
     }
   }
@@ -216,7 +222,10 @@ footer {
     .heading {
       text-align: left;
       h1 {
-        font-size: 1.6rem;
+        font-size: 2.25rem;
+      }
+      h2 {
+        font-size: 1.15rem;
       }
     }
     nav ul li {
