@@ -59,15 +59,92 @@ textarea {
     height: 150px;
 }
 
-.about {
-    background-color: rgba($white, 0.8);
+main {
+    background-color: rgba($white, 0.65);
     color: $black;
     margin: 0;
     padding-bottom: 30px;
     
     .landing-pic {
-        padding-top: 40px;
         width: 100%;
+    }
+}
+
+.portfolio {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+        .img-slider {
+            border: 10px solid $black;
+            background-color: $black;
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+            aspect-ratio: 16/10;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            .img-slide {
+                width: 100%;
+                max-width: 100%;
+                min-height: 400px;
+                position: absolute;
+                transition: transform 0.75s ease-in-out;
+                display: none;
+                img {
+                    z-index: 20;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .img-textbox {
+            border-left: none;
+            background-color: $black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin: 0;
+            padding: 25px;
+            padding-bottom: 100px;
+            animation: fade-in 1s;
+            z-index: 2;
+            color: $white;
+            .img-text {
+                min-width: 100%;
+                display: none;
+                p {
+                    animation: fade-in 1s;
+                }
+            }
+            .img-nav {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                padding: 10px;
+                cursor: pointer;
+                background-color: $color1;
+                font-size: 18px;
+                &.prev {
+                    bottom: 15px;
+                    left: 15px;
+                }
+                &.next {
+                    bottom: 15px;
+                    right: 15px;
+                }
+                &:hover {
+                    background-color: $color2;
+                    transition: background-color 0.75s;
+                }
+            }
+        }
     }
 }
 
@@ -167,45 +244,9 @@ header {
         border-bottom: solid $color2 3px;
         .heading {
             h1 {
-                padding: 0;
-                margin: 0;
+                margin-top: 0;
             }
         }
-    }
-}
-
-.banner-1, .page-header {
-    display: flex;
-    align-items: center;
-    background-color: rgba($color1, 0.6);
-    .wrapper {
-        width: 80%;
-        h3 {
-            margin: 0;
-            padding: 40px 75px;
-        }
-    }
-}
-
-.banner-2 {
-    height: 350px;
-}
-
-.portfolio-main {
-    padding-bottom: 0;
-    .wrapper {
-        width: 85%;
-    }
-}
-
-.portfolio {
-    padding: 30px 0px;
-    background-color: rgba($color2, 0.8);
-    .wrapper {
-        width: 70%;
-    }
-    ul li {
-        margin: 10px 0;
     }
 }
 
@@ -214,19 +255,21 @@ header {
     padding-bottom: 0;
     .wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         gap: 5%;
     }
     p {
-        width: 30%;
+        width: 100%;
     }
     form {
-        background-color: rgba($color2, 0.6);
+        background-color: $black;
         padding: 20px;
-        margin: 30px 20px;
-        margin-top: 0;
-        width: 50%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 100%;
         fieldset {
+            color: $white;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
@@ -242,9 +285,13 @@ header {
                 text-align: right !important;
             }
             input {
+                color: $black;
+                background-color: $white;
                 margin-bottom: 15px;
             }
             textarea {
+                color: $black;
+                background-color: $white;
                 min-width: 100%;
             }
             .submit-button {
@@ -253,14 +300,15 @@ header {
                 justify-content: right;
                 margin-bottom: 5px;
                 .button {
-                    background-color: $black;
+                    background-color: $color1;
                     border: none;
                     cursor: pointer;
                     &:hover {
-                        background-color: rgba($color1, 0.6);
+                        background-color: $color2;
+                        color: $black;
 
                         @media only screen and (max-width: $tablet) {
-                            background-color: $black;
+                            background-color: $color1;
                         }
                     }
                 }
@@ -431,15 +479,6 @@ footer {
             padding: 0;
             width: 100%;
             margin-top: 30px;
-        }
-    }
-    .banner-1, .page-header {
-        min-height: 150px;
-        .wrapper {
-            width: 100%;
-            h3 {
-                padding: 40px;
-            }
         }
     }
     .about {
