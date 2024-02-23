@@ -1,39 +1,61 @@
 @use 'variables' as *;
 
-// font import
+// font imports
+// @font-face {
+//   font-family: "Jost";
+//   src: url(/assets/fonts/Jost/Jost-VariableFont_wght.ttf) format("truetype");
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "Jost-Italic";
+//   src: url(/assets/fonts/Jost/Jost-Italic-VariableFont_wght.ttf) format("truetype");
+//   font-display: swap;
+// }
+
 @font-face {
-  font-family: "Jost";
-  src: url(/assets/fonts/Jost/Jost-VariableFont_wght.ttf) format("truetype");
+  font-family: "B612-Mono-Regular";
+  src: url(/assets/fonts/B612_Mono/B612Mono-Regular.ttf) format("truetype");
   font-display: swap;
 }
 
-// font import
 @font-face {
-  font-family: "Jost-Italic";
-  src: url(/assets/fonts/Jost/Jost-Italic-VariableFont_wght.ttf) format("truetype");
+  font-family: "B612-Mono-Italic";
+  src: url(/assets/fonts/B612_Mono/B612Mono-Italic.ttf) format("truetype");
   font-display: swap;
 }
+
+// @font-face {
+//   font-family: "Nunito-Sans";
+//   src: url(/assets/fonts/Nunito_Sans/NunitoSans-VariableFont.ttf) format("truetype");
+//   font-display: swap;
+// }
 
 // font variables
-$font1: 'Jost',
-serif;
-$font2: 'Jost-Italic',
-sans-serif;
+$font1: 'B612-Mono-Regular', monospace;
+$font2: 'B612-Mono-Italic', monospace;
+
+body {
+  font-family: $font1;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 400;
+}
 
 a {
   color: $color1;
   font-style: normal;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover {
     transition: color 1s, font-style 1s;
-    font-style: italic;
+    font-family: $font2;
     text-decoration: line-through;
     color: $color1;
   }
 
   @media only screen and (max-width: $mobile) {
-    font-style: italic;
+    font-family: $font2;
     &:hover {
       color: $white;
     }
@@ -53,10 +75,6 @@ input, textarea, label {
 }
 
 body {
-  font-family: $font1;
-  letter-spacing: 0.4px;
-  font-size: 18px;
-  font-weight: 400;
   color: $white;
   a {
     color: $white;
@@ -71,14 +89,15 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
-h3 {
-  font-size: 2.5rem;
+h2 {
+  font-family: $font2;
+  font-size: 2rem;
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 
@@ -95,26 +114,21 @@ h4 {
 header {
   .heading {
     h1 {
-        font-size: 2.5rem;
+        font-family: $font2;
+        font-size: 2rem;
         font-weight: 400;
       }
-    h2 {
-      font-style: italic;
-      font-size: 1.25rem;
-      font-weight: 300;
-      line-height: 1;
-    }
   }
   nav {
     ul li {
       font-family: $font1;
-      font-size: 1.4rem;
+      font-size: 1.15rem;
       .current {
         color: $color1;
-        font-style: italic;
+        font-family: $font2;
       }
       a {
-        text-decoration: none;
+        text-decoration: underline;
         &:hover {
           color: $color1;
         }
@@ -139,14 +153,14 @@ main {
 
 .home {
   p {
-    padding: 20px 0;
+    line-height: 1.5;
   }
 }
 
 .about {
   margin-bottom: 50px;
   h5 {
-    font-family: $font2;
+    font-family: $font1;
     font-weight: 400;
     font-size: 2.5rem;
     padding: 40px 0px;
@@ -164,30 +178,24 @@ main {
 .portfolio {
   text-align: left;
   font-family: $font1;
-  font-size: 1.2rem;
-  li {
-    font-size: 1.2rem;
-  }
 }
 
 .contact-main {
   text-align: left;
   p {
     font-family: $font1;
-    font-size: 1.25rem;
     margin: 10px 0;
-    line-height: 1.25;
   }
   form {
     font-family: $font1;
     p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
 }
 
 footer {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: $font1;
   font-weight: 400;
 }
@@ -198,19 +206,10 @@ footer {
       h1 {
         font-size: 2rem;
       }
-      h2 {
-        font-size: 1rem;
-      }
     }
   }
   .contact-main .wrapper p {
-    font-size: 1.1rem;
     text-align: center;
-  }
-  .banner-1 {
-    h3 {
-      font-size: 1.75rem;
-    }
   }
 }
 
@@ -239,11 +238,6 @@ footer {
     p {
       max-width: 95%;
       margin: 0 auto;
-    }
-  }
-  .page-header {
-    h3 {
-      font-size: 3rem;
     }
   }
   .about {
