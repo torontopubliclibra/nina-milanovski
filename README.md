@@ -1,9 +1,9 @@
 # Nina Milanovski
 
 ## About
-This is a website for Nina Milanovski's business, built with jQuery, HTML, and SCSS.
+This is a portfolio website for Nina Milanovski, dance artist and producer. I built the site with jQuery, HTML, and SCSS in February 2024.
 
 ## Attributions
 - [jQuery v3.7.0](https://jquery.com/)
 - [RemixIcon](https://remixicon.com/)
-- [Jost typeface](https://fonts.google.com/specimen/Jost)
+- [B612 Mono typeface](https://fonts.google.com/specimen/B612+Mono)
