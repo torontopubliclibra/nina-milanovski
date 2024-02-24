@@ -70,21 +70,26 @@ main {
             width: 100%;
             object-fit: cover;
             max-height: 350px;
-            transform: translateY(50px);
-            margin-bottom: 40px;
+            margin-top: 30px;
+            margin-bottom: 0;
         }
     }
 
     .homepage-text, .contact-text {
         z-index: 100;
-        transform: translateY(50px) skew(-2deg);
         max-width: 85%;
         padding: 40px;
         background-color: rgba($color1, 0.6);
     }
 
     .homepage-text {
+        transform: translateY(35px) skew(-2deg);
         margin-left: 15%;
+    }
+
+    .contact-text {
+        margin: 0 auto;
+        transform: skew(-2deg);
     }
 
     .bio-text, .portfolio-text {
@@ -155,6 +160,7 @@ main {
                 }
             }
             .img-nav {
+                
                 position: absolute;
                 width: 40px;
                 height: 40px;
@@ -162,6 +168,8 @@ main {
                 cursor: pointer;
                 background-color: $color1;
                 font-size: 1rem;
+                transition: color 0.5s, background-color 0.5s, font-style 0.5s, transform 0.5s;
+                    
                 &.prev {
                     bottom: 15px;
                     left: 15px;
@@ -173,6 +181,7 @@ main {
                 &:hover {
                     background-color: $color2;
                     transition: background-color 0.75s;
+                    transform: skew(-5deg);
                 }
             }
         }
@@ -192,9 +201,9 @@ main {
     background-color: rgba($color2, 0.8);
     padding: 10px 20px;
     cursor: pointer;
-    transition: color 0.5s, background-color 0.5s, font-style 0.5s;
+    transition: color 0.5s, background-color 0.5s, font-style 0.5s, transform 0.5s;
     &:hover {
-        font-style: italic;
+        transform: skew(-5deg);
         background-color: rgba($color1, 0.6);
 
         @media only screen and (max-width: $mobile) {
@@ -278,22 +287,21 @@ header {
         gap: 5%;
     }
     img {
-        margin: 0 auto;
+        margin-left: 20%;
         width: 80%;
         object-fit: cover;
         max-height: 350px;
-        transform: translateY(50px);
-        margin-bottom: 30px;
+        transform: translateY(60px);
     }
     p {
         width: 100%;
     }
     form {
+        transform: translateY(-40px);
         background-color: rgba($black, 0.8);
         padding: 40px 20px;
         margin-top: 20px;
         margin-bottom: 40px;
-        margin-left: 15%;
         width: 85%;
         fieldset {
             display: flex;
@@ -352,6 +360,21 @@ footer {
     bottom: 0;
     display: flex;
     width: 400px;
+
+    .social-buttons {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        .social-button {
+            display: flex;
+            padding: 10px;
+            width: 50px;
+            img {
+                max-width: 30px;
+            }
+        }
+    }
 
     // responsive to mobile
     @media only screen and (max-width: $tablet) {

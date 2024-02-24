@@ -46,10 +46,10 @@ a {
   color: $color1;
   font-style: normal;
   text-decoration: underline;
+  transition: color 1s, font-style 1s;
 
   &:hover {
-    transition: color 1s, font-style 1s;
-    font-family: $font2;
+    font-style: italic;
     text-decoration: line-through;
     color: $color1;
   }
@@ -121,15 +121,17 @@ header {
   }
   nav {
     ul li {
-      font-family: $font1;
       font-size: 1.15rem;
       .current {
         color: $color1;
-        font-family: $font2;
+        font-style: italic;
       }
       a {
+        color: $white;
         text-decoration: underline;
+        transition: color 0.4s, font-style 0.4s;
         &:hover {
+          font-style: italic;
           color: $color1;
         }
         @media only screen and (max-width: $mobile) {
