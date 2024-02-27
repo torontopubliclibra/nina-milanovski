@@ -75,6 +75,28 @@ main {
         }
     }
 
+    .project {
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    .main-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: left;
+        margin-bottom: 20px;
+    }
+
     .homepage-text, .contact-text {
         z-index: 100;
         max-width: 85%;
@@ -89,6 +111,7 @@ main {
 
     .contact-text {
         margin: 0 auto;
+        margin-top: 40px;
         transform: skew(-2deg);
     }
 
@@ -102,7 +125,6 @@ main {
         animation: none;
         z-index: 50;
         width: 95%;
-        margin-bottom: 40px;
     }
 }
 
@@ -203,8 +225,10 @@ main {
     cursor: pointer;
     transition: color 0.5s, background-color 0.5s, font-style 0.5s, transform 0.5s;
     &:hover {
+        color: $black;
         transform: skew(-5deg);
         background-color: rgba($color1, 0.6);
+        text-decoration: none;
 
         @media only screen and (max-width: $mobile) {
             font-style: normal;

@@ -301,7 +301,9 @@ hr {
   border-style: solid;
   border-color: rgba(181, 132, 166, 0.8);
   height: 1px;
+  width: 100%;
   box-shadow: none;
+  margin-bottom: 20px;
 }
 
 input, textarea, label {
@@ -338,7 +340,7 @@ h4 {
 
 .button {
   font-family: "B612-Mono-Regular", monospace;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
   color: #2c2f30;
 }
@@ -543,6 +545,25 @@ main.bio-main img {
   margin-top: 30px;
   margin-bottom: 0;
 }
+main .project {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+main .main-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+main .portfolio-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: left;
+  margin-bottom: 20px;
+}
 main .homepage-text, main .contact-text {
   z-index: 100;
   max-width: 85%;
@@ -555,6 +576,7 @@ main .homepage-text {
 }
 main .contact-text {
   margin: 0 auto;
+  margin-top: 40px;
   transform: skew(-2deg);
 }
 main .bio-text, main .portfolio-text {
@@ -566,7 +588,6 @@ main .landing-pic {
   animation: none;
   z-index: 50;
   width: 95%;
-  margin-bottom: 40px;
 }
 
 .portfolio .wrapper {
@@ -661,8 +682,10 @@ main .landing-pic {
   transition: color 0.5s, background-color 0.5s, font-style 0.5s, transform 0.5s;
 }
 .button:hover {
+  color: #2c2f30;
   transform: skew(-5deg);
   background-color: rgba(134, 172, 134, 0.6);
+  text-decoration: none;
 }
 @media only screen and (max-width: 768px) {
   .button:hover {
