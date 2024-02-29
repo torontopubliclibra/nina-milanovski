@@ -136,18 +136,22 @@ let app = {
 
         if (app.project_1.maxSlide > 0) {
             app.project_1.prevSlide.addEventListener('click', () => app.functions.prevSlideFunction(1));
+            app.project_1.nextSlide.addEventListener('click', () => app.functions.nextSlideFunction(1));
         }
 
         if (app.project_2.maxSlide > 0) {
             app.project_2.prevSlide.addEventListener('click', () => app.functions.prevSlideFunction(2));
+            app.project_2.nextSlide.addEventListener('click', () => app.functions.nextSlideFunction(2));
         }
 
         if (app.project_3.maxSlide > 0) {
             app.project_3.prevSlide.addEventListener('click', () => app.functions.prevSlideFunction(3));
+            app.project_3.nextSlide.addEventListener('click', () => app.functions.nextSlideFunction(3));
         }
 
         if (app.project_4.maxSlide > 0) {
             app.project_4.prevSlide.addEventListener('click', () => app.functions.prevSlideFunction(4));
+            app.project_4.nextSlide.addEventListener('click', () => app.functions.nextSlideFunction(4));
         }
 
     },
