@@ -482,7 +482,8 @@ body {
   display: flex;
   flex-flow: row wrap;
   background-color: #2c2f30;
-  background-image: url("./../../assets/texture.png");
+  background-image: url("./../../assets/rain-texture.png");
+  background-size: 45%;
   text-align: left;
   overflow-x: hidden;
   width: 100%;
