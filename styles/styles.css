@@ -431,14 +431,6 @@ footer {
 }
 
 @media only screen and (max-width: 970px) {
-  header .heading h1 {
-    font-size: 2rem;
-  }
-  .contact-main .wrapper p {
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 768px) {
   header .heading {
     text-align: left;
   }
@@ -496,8 +488,9 @@ body {
     overflow-y: hidden;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   body {
+    background-size: 100%;
     position: absolute;
     top: 50px;
     width: 100vw;
@@ -510,11 +503,6 @@ main {
   overflow-y: scroll;
 }
 @media only screen and (max-width: 970px) {
-  main {
-    width: calc(100vw - 250px);
-  }
-}
-@media only screen and (max-width: 768px) {
   main {
     width: 100vw;
     height: auto;
@@ -538,6 +526,10 @@ main {
   margin: 0;
   padding-bottom: 30px;
 }
+main .wrapper {
+  display: flex;
+  flex-direction: column;
+}
 main.bio-main img {
   width: 100%;
   -o-object-fit: cover;
@@ -557,6 +549,17 @@ main .main-buttons {
   margin-top: 40px;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 970px) {
+  main .main-buttons {
+    order: 3;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 45px;
+  }
+  main .main-buttons .button {
+    width: 90%;
+  }
+}
 main .portfolio-buttons {
   display: flex;
   flex-direction: column;
@@ -571,9 +574,21 @@ main .homepage-text, main .contact-text {
   padding: 40px;
   background-color: rgba(134, 172, 134, 0.6);
 }
+@media only screen and (max-width: 970px) {
+  main .homepage-text, main .contact-text {
+    max-width: 85%;
+  }
+}
 main .homepage-text {
   transform: translateY(35px) skew(-2deg);
   margin-left: 15%;
+}
+@media only screen and (max-width: 970px) {
+  main .homepage-text {
+    order: 2;
+    transform: skew(-3deg);
+    margin: 0 auto;
+  }
 }
 main .contact-text {
   margin: 0 auto;
@@ -589,6 +604,11 @@ main .landing-pic {
   animation: none;
   z-index: 50;
   width: 95%;
+}
+@media only screen and (max-width: 970px) {
+  main .landing-pic {
+    width: 100%;
+  }
 }
 
 .portfolio .wrapper {
@@ -688,7 +708,7 @@ main .landing-pic {
   background-color: rgba(134, 172, 134, 0.6);
   text-decoration: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   .button:hover {
     font-style: normal;
     background-color: rgba(181, 132, 166, 0.8);
@@ -702,12 +722,9 @@ header {
 }
 @media only screen and (max-width: 970px) {
   header {
-    width: 250px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  header {
+    background-color: rgba(44, 47, 48, 0.5);
     width: 100vw;
+    height: 200px;
   }
 }
 header .wrapper {
@@ -761,6 +778,12 @@ header .title .heading h1 {
   margin-top: 0;
   z-index: 100;
 }
+@media only screen and (max-width: 970px) {
+  header .title .heading h1 {
+    margin: 0 15px;
+    z-index: 1;
+  }
+}
 header .title .heading .title-blob {
   transform: rotate(-70deg) scale(1.75);
   width: 90%;
@@ -769,6 +792,14 @@ header .title .heading .title-blob {
   top: -110px;
   z-index: 0;
   animation: none;
+}
+@media only screen and (max-width: 970px) {
+  header .title .heading .title-blob {
+    transform: rotate(-70deg) scale(1.5);
+    width: 450px;
+    top: -225px;
+    left: -50px;
+  }
 }
 
 .contact-main {
@@ -872,11 +903,6 @@ footer .social-buttons .social-button img {
 }
 @media only screen and (max-width: 970px) {
   footer {
-    width: 250px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  footer {
     width: 100vw;
     position: unset;
   }
@@ -895,34 +921,12 @@ footer .wrapper p {
 }
 
 @media only screen and (max-width: 970px) {
-  header {
-    height: 150px;
-  }
-  header .title .logo {
-    width: 120px;
-  }
-  .contact-main {
-    padding: 25px;
-  }
-  .contact-main .wrapper {
-    flex-wrap: wrap;
-  }
-  .contact-main p {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-  .contact-main form {
-    margin: 5px;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 768px) {
   .wrapper {
-    width: 95%;
+    width: 100%;
   }
   header nav {
     position: fixed;
-    z-index: 4;
+    z-index: 1000;
     width: 100vw;
   }
   header nav .hamburger-btn {
@@ -936,7 +940,7 @@ footer .wrapper p {
     position: relative;
     display: flex;
     border: none;
-    background-color: #86AC86;
+    background-color: #B584A6;
     color: #F6F4F5;
     height: 55px;
     width: 100%;
@@ -1001,15 +1005,6 @@ footer .wrapper p {
     padding: 0;
     width: 100%;
     margin-top: 30px;
-  }
-  .about .wrapper {
-    width: 90%;
-  }
-  .portfolio .wrapper {
-    width: 85%;
-  }
-  .portfolio-main .wrapper {
-    width: 90%;
   }
   footer {
     margin: 40px 20px;

@@ -18,14 +18,15 @@ body {
     height: 100vh;
     min-height: 500px;
     &.nav-open {
-        // responsive to mobile
+        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             overflow-y: hidden;
         }
     }
 
-    // responsive to mobile
-    @media only screen and (max-width: $mobile) {
+    // responsive to tablet
+    @media only screen and (max-width: $tablet) {
+        background-size: 100%;
         position: absolute;
         top: 50px;
         width: 100vw;
@@ -39,11 +40,6 @@ main {
 
     // responsive to tablet
     @media only screen and (max-width: $tablet) {
-        width: calc(100vw - 250px);
-    }
-
-    // responsive to mobile
-    @media only screen and (max-width: $mobile) {
         width: 100vw;
         height: auto;
         overflow: auto;
@@ -66,6 +62,11 @@ main {
     margin: 0;
     padding-bottom: 30px;
 
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
     &.bio-main {
         img {
             width: 100%;
@@ -87,6 +88,18 @@ main {
         align-items: center;
         margin-top: 40px;
         margin-bottom: 20px;
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            order: 3;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 45px;
+
+            .button {
+                width: 90%;
+            }
+        }
     }
 
     .portfolio-buttons {
@@ -103,11 +116,23 @@ main {
         max-width: 85%;
         padding: 40px;
         background-color: rgba($color1, 0.6);
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            max-width: 85%;
+        }
     }
 
     .homepage-text {
         transform: translateY(35px) skew(-2deg);
         margin-left: 15%;
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            order: 2;
+            transform: skew(-3deg);
+            margin: 0 auto;
+        }
     }
 
     .contact-text {
@@ -126,6 +151,11 @@ main {
         animation: none;
         z-index: 50;
         width: 95%;
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            width: 100%;
+        }
     }
 }
 
@@ -231,7 +261,7 @@ main {
         background-color: rgba($color1, 0.6);
         text-decoration: none;
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             font-style: normal;
             background-color: rgba($color2, 0.8);
         }
@@ -244,14 +274,11 @@ header {
     width: 400px;
     height: 100vh;
 
-    // responsive to mobile
+    // responsive to tablet
     @media only screen and (max-width: $tablet) {
-        width: 250px;
-    }
-
-    // responsive to mobile
-    @media only screen and (max-width: $mobile) {
+        background-color: rgba($black, 0.5);
         width: 100vw;
+        height: 200px;
     }
 
     .wrapper {
@@ -299,11 +326,18 @@ header {
         padding: 35px 0;
         padding-bottom: 30px;
         min-width: 100%;
+
         .heading {
             h1 {
                 position: relative;
                 margin-top: 0;
                 z-index: 100;
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    margin: 0 15px;
+                    z-index: 1;
+                }
             }
             .title-blob {
                 transform: rotate(-70deg) scale(1.75);
@@ -313,6 +347,14 @@ header {
                 top: -110px;
                 z-index: 0;
                 animation: none;
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    transform: rotate(-70deg) scale(1.5);
+                    width: 450px;
+                    top: -225px;
+                    left: -50px;
+                }
             }
         }
     }
@@ -416,13 +458,8 @@ footer {
         }
     }
 
-    // responsive to mobile
+    // responsive to tablet
     @media only screen and (max-width: $tablet) {
-        width: 250px;
-    }
-
-    // responsive to mobile
-    @media only screen and (max-width: $mobile) {
         width: 100vw;
         position: unset;
     }
@@ -442,40 +479,15 @@ footer {
     }
 }
 
+// screens smaller than $tablet
 @media only screen and (max-width: $tablet) {
-    header {
-        height: 150px;
-        .title {
-            .logo {
-                width: 120px;
-            }
-        }
-    }
-    .contact-main {
-        .wrapper {
-            flex-wrap: wrap;
-        }
-        padding: 25px;
-        p {
-            width: 90%;
-            margin-bottom: 20px;
-        }
-        form {
-            margin: 5px;
-            width: 100%;
-        }
-    }
-}
-
-// screens smaller than $mobile
-@media only screen and (max-width: $mobile) {
     .wrapper {
-        width: 95%;
+        width: 100%;
     }
     header {
         nav {
             position: fixed;
-            z-index: 4;
+            z-index: 1000;
             width: 100vw;
             .hamburger-btn {
                 z-index: 5;
@@ -487,7 +499,7 @@ footer {
                     position: relative;
                     display: flex;
                     border: none;
-                    background-color: $color1;
+                    background-color: $color2;
                     color: $white;
                     height: 55px;
                     width: 100%;
@@ -562,21 +574,6 @@ footer {
             padding: 0;
             width: 100%;
             margin-top: 30px;
-        }
-    }
-    .about {
-        .wrapper {
-            width: 90%;
-        }
-    }
-    .portfolio {
-        .wrapper {
-            width: 85%;
-        }
-    }
-    .portfolio-main {
-        .wrapper {
-            width: 90%;
         }
     }
     footer {

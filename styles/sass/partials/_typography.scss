@@ -1,17 +1,5 @@
 @use 'variables' as *;
 
-// font imports
-// @font-face {
-//   font-family: "Jost";
-//   src: url(/assets/fonts/Jost/Jost-VariableFont_wght.ttf) format("truetype");
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: "Jost-Italic";
-//   src: url(/assets/fonts/Jost/Jost-Italic-VariableFont_wght.ttf) format("truetype");
-//   font-display: swap;
-// }
 
 @font-face {
   font-family: "B612-Mono-Regular";
@@ -25,11 +13,6 @@
   font-display: swap;
 }
 
-// @font-face {
-//   font-family: "Nunito-Sans";
-//   src: url(/assets/fonts/Nunito_Sans/NunitoSans-VariableFont.ttf) format("truetype");
-//   font-display: swap;
-// }
 
 // font variables
 $font1: 'B612-Mono-Regular', monospace;
@@ -205,19 +188,6 @@ footer {
 }
 
 @media only screen and (max-width: $tablet) {
-  header {
-    .heading {
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  }
-  .contact-main .wrapper p {
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: $mobile) {
   header {
     .heading {
       text-align: left;
