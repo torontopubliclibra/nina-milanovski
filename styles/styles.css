@@ -409,6 +409,10 @@ main a:hover {
   text-align: left;
   font-family: "B612-Mono-Regular", monospace;
 }
+.portfolio .credits {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
 
 .contact-main {
   text-align: left;
