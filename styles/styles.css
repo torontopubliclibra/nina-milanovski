@@ -566,11 +566,19 @@ main .main-buttons {
 }
 main .portfolio-buttons {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   gap: 20px;
   justify-content: space-between;
   align-items: left;
   margin-bottom: 20px;
+}
+main .portfolio-buttons .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  width: calc(50% - 10px);
 }
 main .homepage-text, main .contact-text {
   z-index: 100;
@@ -657,7 +665,6 @@ main .landing-pic {
   height: 80px;
   margin: 0;
   padding: 25px;
-  animation: fade-in 1s;
   z-index: 2;
   color: #F6F4F5;
 }
@@ -667,7 +674,9 @@ main .landing-pic {
 }
 .portfolio .wrapper .img-textbox .img-text p {
   text-align: center;
-  animation: fade-in 1s;
+}
+.portfolio .wrapper .img-textbox .img-text a {
+  color: #F6F4F5;
 }
 .portfolio .wrapper .img-textbox .img-nav {
   position: absolute;

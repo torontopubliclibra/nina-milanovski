@@ -104,11 +104,20 @@ main {
 
     .portfolio-buttons {
         display: flex;
-        flex-direction: column;
+        flex-flow: row wrap;
         gap: 20px;
         justify-content: space-between;
         align-items: left;
         margin-bottom: 20px;
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 80px;
+            width: calc(50% - 10px);
+        }
     }
 
     .homepage-text, .contact-text {
@@ -201,7 +210,6 @@ main {
             height: 80px;
             margin: 0;
             padding: 25px;
-            animation: fade-in 1s;
             z-index: 2;
             color: $white;
             .img-text {
@@ -209,7 +217,9 @@ main {
                 display: none;
                 p {
                     text-align: center;
-                    animation: fade-in 1s;
+                }
+                a {
+                    color: $white;
                 }
             }
             .img-nav {
