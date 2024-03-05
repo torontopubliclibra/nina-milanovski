@@ -9,6 +9,7 @@ html {
     // responsive to tablet
     @media only screen and (max-width: $tablet) {
         max-width: 100vw !important;
+        overflow-x: hidden;
         &.nav-open {
             overflow: hidden;
             max-height: 100vh !important;

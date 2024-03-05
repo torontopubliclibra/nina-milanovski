@@ -451,6 +451,7 @@ html {
 @media only screen and (max-width: 970px) {
   html {
     max-width: 100vw !important;
+    overflow-x: hidden;
   }
   html.nav-open {
     overflow: hidden;
