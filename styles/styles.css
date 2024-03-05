@@ -470,8 +470,8 @@ body {
   }
   body.nav-open {
     overflow: hidden;
-    height: 100vh;
-    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
   }
 }
 
@@ -482,8 +482,10 @@ main {
 }
 @media only screen and (max-width: 970px) {
   main {
+    max-width: 100vw;
     width: 100vw;
-    height: auto;
+    height: -moz-fit-content;
+    height: fit-content;
     overflow-y: visible;
   }
 }
