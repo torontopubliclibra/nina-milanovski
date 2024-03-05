@@ -35,8 +35,9 @@ body {
     @media only screen and (max-width: $tablet) {
         background-size: 100%;
         position: absolute;
-        top: 50px;
+        top: 0;
         left: 0;
+        padding-top: 50px;
 
         &.nav-open {
             overflow: hidden;
