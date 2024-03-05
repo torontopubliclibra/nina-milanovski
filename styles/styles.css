@@ -448,6 +448,13 @@ footer {
 html {
   position: relative;
 }
+@media only screen and (max-width: 970px) {
+  html.nav-open {
+    overflow: hidden;
+    max-height: 100vh !important;
+    max-width: 100vw !important;
+  }
+}
 
 body {
   display: flex;
@@ -1036,7 +1043,7 @@ footer .wrapper p {
     top: 20px;
     height: calc(100vh - 20px);
     padding: 5% 0;
-    width: 100vw;
+    width: 100%;
     background-color: rgba(44, 47, 48, 0.95);
   }
   header nav .nav-list * {

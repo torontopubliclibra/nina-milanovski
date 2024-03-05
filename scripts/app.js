@@ -3,6 +3,7 @@ let app = {
 
     // page elements
     elements: {
+        html: $("html"),
         body: $("body"),
         nav: $("nav"),
     },
@@ -123,6 +124,7 @@ let app = {
 
         // toggle classes to hide or show the nav
         toggleNav: () => {
+            app.elements.html.toggleClass("nav-open");
             app.elements.body.toggleClass("nav-open");
             app.elements.nav.toggleClass("active");
         },
