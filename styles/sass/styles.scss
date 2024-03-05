@@ -3,9 +3,14 @@
 @use 'partials/variables' as *;
 @use 'partials/typography' as *;
 
+html {
+    position: relative;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
 // default body styles
 body {
-    position: relative;
     display: flex;
     flex-flow: row wrap;
     background-color: $black;
@@ -14,7 +19,6 @@ body {
     text-align: left;
     overflow-x: hidden;
     width: 100%;
-    max-width: 100vw;
     height: 100vh;
     min-height: 500px;
     &.nav-open {
