@@ -19,20 +19,19 @@ body {
     width: 100%;
     height: 100vh;
     min-height: 500px;
-    &.nav-open {
-        // responsive to tablet
-        @media only screen and (max-width: $tablet) {
-            overflow: hidden;
-        }
-    }
 
     // responsive to tablet
     @media only screen and (max-width: $tablet) {
         background-size: 100%;
         position: absolute;
         top: 50px;
-        width: 100%;
         left: 0;
+        max-height: 100%;
+        max-width: 100vw;
+
+        &.nav-open {
+            overflow: hidden;
+        }
     }
 }
 

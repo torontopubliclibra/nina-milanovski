@@ -462,17 +462,16 @@ body {
   min-height: 500px;
 }
 @media only screen and (max-width: 970px) {
-  body.nav-open {
-    overflow: hidden;
-  }
-}
-@media only screen and (max-width: 970px) {
   body {
     background-size: 100%;
     position: absolute;
     top: 50px;
-    width: 100%;
     left: 0;
+    max-height: 100%;
+    max-width: 100vw;
+  }
+  body.nav-open {
+    overflow: hidden;
   }
 }
 
