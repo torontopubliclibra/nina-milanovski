@@ -37,10 +37,12 @@ a {
     color: $color1;
   }
 
-  @media only screen and (max-width: $mobile) {
+  @media only screen and (max-width: $tablet) {
     font-family: $font2;
     &:hover {
       color: $white;
+      text-decoration: underline;
+      font-style: normal;
     }
   }
 }
@@ -64,10 +66,6 @@ body {
   a {
     color: $white;
   }
-
-  @media only screen and (max-width: $tablet) {
-    font-size: 16px;
-  }
 }
 
 h1, h2, h3, h4 {
@@ -79,11 +77,21 @@ h2 {
   font-size: 2rem;
   margin-top: 40px;
   margin-bottom: 20px;
+
+  @media only screen and (max-width: $tablet) {
+    width: 85%;
+    margin: 20px auto;
+  }
 }
 
 h4 {
   font-size: 1.4rem;
   margin: 0;
+
+  @media only screen and (max-width: $tablet) {
+    width: 85%;
+    margin: 20px auto;
+  }
 }
 
 .button {
@@ -119,7 +127,7 @@ header {
           font-style: italic;
           color: $color1;
         }
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
           font-style: normal;
         }
       }
@@ -190,52 +198,4 @@ footer {
   font-size: 0.9rem;
   font-family: $font1;
   font-weight: 400;
-}
-
-@media only screen and (max-width: $tablet) {
-  header {
-    .heading {
-      text-align: left;
-      h1 {
-        font-size: 2.25rem;
-      }
-      h2 {
-        font-size: 1.15rem;
-      }
-    }
-    nav ul li {
-      font-size: 1.6rem;
-      a:hover {
-        font-style: normal;
-      }
-    }
-  }
-  footer {
-    p, a {
-      font-size: 1.1rem;
-    }
-    p {
-      max-width: 95%;
-      margin: 0 auto;
-    }
-  }
-  .about {
-    p {
-      margin: 0;
-      padding-bottom: 20px;
-      padding-left: 0;
-      padding-right: 0;
-    }
-    h5 {
-      font-size: 1.75rem;
-      padding-bottom: 30px;
-    }
-  }
-  .portfolio-main {
-    p {
-      font-size: 1.2rem;
-      padding: 50px 15px;
-      padding-bottom: 30px;
-    }
-  }
 }

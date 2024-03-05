@@ -97,7 +97,7 @@ main {
             margin-top: 45px;
 
             .button {
-                width: 90%;
+                width: 75%;
             }
         }
     }
@@ -117,6 +117,17 @@ main {
             text-align: center;
             height: 80px;
             width: calc(50% - 10px);
+        }
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            flex-direction: column;
+
+            .button {
+                width: 85%;
+                height: 100%;
+                margin: 0 auto;
+            }
         }
     }
 
@@ -139,7 +150,7 @@ main {
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
             order: 2;
-            transform: skew(-3deg);
+            transform: skew(-1deg);
             margin: 0 auto;
         }
     }
@@ -154,6 +165,13 @@ main {
         transform: skew(-2deg);
         padding: 40px;
         background-color: rgba($color1, 0.6);
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            transform: skew(-1deg);
+            width: 85%;
+            margin: 0 auto;
+        }
     }
 
     .landing-pic {
@@ -179,7 +197,7 @@ main {
             background-color: rgba($black, 0.8);
             width: 100%;
             margin-top: 10px;
-            height: 100%;
+            height: 500px;
             aspect-ratio: 16/10;
             position: relative;
             overflow: hidden;
@@ -187,7 +205,7 @@ main {
             .img-slide {
                 width: 100%;
                 max-width: 100%;
-                min-height: 400px;
+                height: 100%;
                 position: absolute;
                 transition: transform 0.75s ease-in-out;
                 display: none;
@@ -196,7 +214,14 @@ main {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    object-position: 50% 50%;
                 }
+            }
+
+            @media only screen and (max-width: $tablet) {
+                width: 90%;
+                margin: 20px auto;
+                margin-bottom: 0;
             }
         }
         .img-textbox {
@@ -223,7 +248,6 @@ main {
                 }
             }
             .img-nav {
-                
                 position: absolute;
                 width: 40px;
                 height: 40px;
@@ -247,6 +271,29 @@ main {
                     transform: skew(-5deg);
                 }
             }
+            @media only screen and (max-width: $tablet) {
+                width: 90%;
+                height: 120px;
+                margin: 20px auto;
+                margin-top: 0;
+                justify-content: flex-start;
+
+                .img-text {
+                    height: 130px;
+                }
+                .img-nav {
+                    height: 50px;
+                    width: 50px;
+                    transform: skew(-3deg);
+                    background-color: $color2;
+
+                    &:hover {
+                        background-color: $color2;
+                        transition: none;
+                        transform: skew(-3deg);
+                    }
+                }
+            }
         }
     }
 }
@@ -261,19 +308,23 @@ main {
 // button styles
 .button {
     font-style: normal;
-    background-color: rgba($color2, 0.8);
+    background-color: $color2;
     padding: 10px 20px;
     cursor: pointer;
     transition: color 0.5s, background-color 0.5s, font-style 0.5s, transform 0.5s;
     &:hover {
         color: $black;
         transform: skew(-5deg);
-        background-color: rgba($color1, 0.6);
+        background-color: $color1;
         text-decoration: none;
-
-        @media only screen and (max-width: $tablet) {
-            font-style: normal;
-            background-color: rgba($color2, 0.8);
+    }
+    @media only screen and (max-width: $tablet) {
+        transform: skew(-3deg);
+        font-style: italic;
+        &:hover {
+            transform: skew(-3deg);
+            font-style: italic;
+            background-color: $color2;
         }
     }
 }
@@ -360,10 +411,10 @@ header {
 
                 // responsive to tablet
                 @media only screen and (max-width: $tablet) {
-                    transform: rotate(-70deg) scale(1.5);
+                    transform: rotate(-70deg) scale(1.75);
                     width: 450px;
                     top: -225px;
-                    left: -50px;
+                    left: -100px;
                 }
             }
         }
@@ -384,6 +435,11 @@ header {
         object-fit: cover;
         max-height: 350px;
         transform: translateY(60px);
+
+        @media only screen and (max-width: $tablet) {
+            width: 100%;
+            margin: 0;
+        }
     }
     p {
         width: 100%;
@@ -395,6 +451,11 @@ header {
         margin-top: 20px;
         margin-bottom: 40px;
         width: 85%;
+
+        @media only screen and (max-width: $tablet) {
+            width: 100%;
+        }
+
         fieldset {
             display: flex;
             flex-direction: column;
@@ -509,7 +570,7 @@ footer {
                     position: relative;
                     display: flex;
                     border: none;
-                    background-color: $color2;
+                    background-color: rgba($color2, 0.8);
                     color: $white;
                     height: 55px;
                     width: 100%;

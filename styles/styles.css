@@ -287,12 +287,14 @@ a:hover {
   text-decoration: line-through;
   color: #86AC86;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   a {
     font-family: "B612-Mono-Italic", monospace;
   }
   a:hover {
     color: #F6F4F5;
+    text-decoration: underline;
+    font-style: normal;
   }
 }
 
@@ -316,11 +318,6 @@ body {
 body a {
   color: #F6F4F5;
 }
-@media only screen and (max-width: 970px) {
-  body {
-    font-size: 16px;
-  }
-}
 
 h1, h2, h3, h4 {
   font-weight: 500;
@@ -332,10 +329,22 @@ h2 {
   margin-top: 40px;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 970px) {
+  h2 {
+    width: 85%;
+    margin: 20px auto;
+  }
+}
 
 h4 {
   font-size: 1.4rem;
   margin: 0;
+}
+@media only screen and (max-width: 970px) {
+  h4 {
+    width: 85%;
+    margin: 20px auto;
+  }
 }
 
 .button {
@@ -369,7 +378,7 @@ header nav ul li a:hover {
   font-style: italic;
   color: #86AC86;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   header nav ul li a {
     font-style: normal;
   }
@@ -434,45 +443,6 @@ footer {
   font-weight: 400;
 }
 
-@media only screen and (max-width: 970px) {
-  header .heading {
-    text-align: left;
-  }
-  header .heading h1 {
-    font-size: 2.25rem;
-  }
-  header .heading h2 {
-    font-size: 1.15rem;
-  }
-  header nav ul li {
-    font-size: 1.6rem;
-  }
-  header nav ul li a:hover {
-    font-style: normal;
-  }
-  footer p, footer a {
-    font-size: 1.1rem;
-  }
-  footer p {
-    max-width: 95%;
-    margin: 0 auto;
-  }
-  .about p {
-    margin: 0;
-    padding-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .about h5 {
-    font-size: 1.75rem;
-    padding-bottom: 30px;
-  }
-  .portfolio-main p {
-    font-size: 1.2rem;
-    padding: 50px 15px;
-    padding-bottom: 30px;
-  }
-}
 body {
   position: relative;
   display: flex;
@@ -561,7 +531,7 @@ main .main-buttons {
     margin-top: 45px;
   }
   main .main-buttons .button {
-    width: 90%;
+    width: 75%;
   }
 }
 main .portfolio-buttons {
@@ -579,6 +549,16 @@ main .portfolio-buttons .button {
   text-align: center;
   height: 80px;
   width: calc(50% - 10px);
+}
+@media only screen and (max-width: 970px) {
+  main .portfolio-buttons {
+    flex-direction: column;
+  }
+  main .portfolio-buttons .button {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+  }
 }
 main .homepage-text, main .contact-text {
   z-index: 100;
@@ -598,7 +578,7 @@ main .homepage-text {
 @media only screen and (max-width: 970px) {
   main .homepage-text {
     order: 2;
-    transform: skew(-3deg);
+    transform: skew(-1deg);
     margin: 0 auto;
   }
 }
@@ -611,6 +591,13 @@ main .bio-text, main .portfolio-text {
   transform: skew(-2deg);
   padding: 40px;
   background-color: rgba(134, 172, 134, 0.6);
+}
+@media only screen and (max-width: 970px) {
+  main .bio-text, main .portfolio-text {
+    transform: skew(-1deg);
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 main .landing-pic {
   animation: none;
@@ -633,7 +620,7 @@ main .landing-pic {
   background-color: rgba(44, 47, 48, 0.8);
   width: 100%;
   margin-top: 10px;
-  height: 100%;
+  height: 500px;
   aspect-ratio: 16/10;
   position: relative;
   overflow: hidden;
@@ -642,7 +629,7 @@ main .landing-pic {
 .portfolio .wrapper .img-slider .img-slide {
   width: 100%;
   max-width: 100%;
-  min-height: 400px;
+  height: 100%;
   position: absolute;
   transition: transform 0.75s ease-in-out;
   display: none;
@@ -653,6 +640,15 @@ main .landing-pic {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+@media only screen and (max-width: 970px) {
+  .portfolio .wrapper .img-slider {
+    width: 90%;
+    margin: 20px auto;
+    margin-bottom: 0;
+  }
 }
 .portfolio .wrapper .img-textbox {
   border-left: none;
@@ -701,6 +697,29 @@ main .landing-pic {
   transition: background-color 0.75s;
   transform: skew(-5deg);
 }
+@media only screen and (max-width: 970px) {
+  .portfolio .wrapper .img-textbox {
+    width: 90%;
+    height: 120px;
+    margin: 20px auto;
+    margin-top: 0;
+    justify-content: flex-start;
+  }
+  .portfolio .wrapper .img-textbox .img-text {
+    height: 130px;
+  }
+  .portfolio .wrapper .img-textbox .img-nav {
+    height: 50px;
+    width: 50px;
+    transform: skew(-3deg);
+    background-color: #B584A6;
+  }
+  .portfolio .wrapper .img-textbox .img-nav:hover {
+    background-color: #B584A6;
+    transition: none;
+    transform: skew(-3deg);
+  }
+}
 
 .wrapper {
   max-width: 1260px;
@@ -710,7 +729,7 @@ main .landing-pic {
 
 .button {
   font-style: normal;
-  background-color: rgba(181, 132, 166, 0.8);
+  background-color: #B584A6;
   padding: 10px 20px;
   cursor: pointer;
   transition: color 0.5s, background-color 0.5s, font-style 0.5s, transform 0.5s;
@@ -718,13 +737,18 @@ main .landing-pic {
 .button:hover {
   color: #2c2f30;
   transform: skew(-5deg);
-  background-color: rgba(134, 172, 134, 0.6);
+  background-color: #86AC86;
   text-decoration: none;
 }
 @media only screen and (max-width: 970px) {
+  .button {
+    transform: skew(-3deg);
+    font-style: italic;
+  }
   .button:hover {
-    font-style: normal;
-    background-color: rgba(181, 132, 166, 0.8);
+    transform: skew(-3deg);
+    font-style: italic;
+    background-color: #B584A6;
   }
 }
 
@@ -808,10 +832,10 @@ header .title .heading .title-blob {
 }
 @media only screen and (max-width: 970px) {
   header .title .heading .title-blob {
-    transform: rotate(-70deg) scale(1.5);
+    transform: rotate(-70deg) scale(1.75);
     width: 450px;
     top: -225px;
-    left: -50px;
+    left: -100px;
   }
 }
 
@@ -832,6 +856,12 @@ header .title .heading .title-blob {
   max-height: 350px;
   transform: translateY(60px);
 }
+@media only screen and (max-width: 970px) {
+  .contact-main img {
+    width: 100%;
+    margin: 0;
+  }
+}
 .contact-main p {
   width: 100%;
 }
@@ -842,6 +872,11 @@ header .title .heading .title-blob {
   margin-top: 20px;
   margin-bottom: 40px;
   width: 85%;
+}
+@media only screen and (max-width: 970px) {
+  .contact-main form {
+    width: 100%;
+  }
 }
 .contact-main form fieldset {
   display: flex;
@@ -953,7 +988,7 @@ footer .wrapper p {
     position: relative;
     display: flex;
     border: none;
-    background-color: #B584A6;
+    background-color: rgba(181, 132, 166, 0.8);
     color: #F6F4F5;
     height: 55px;
     width: 100%;
