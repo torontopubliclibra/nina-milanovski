@@ -451,11 +451,6 @@ html {
   max-width: 100vw;
   min-height: 100vh;
 }
-@media only screen and (max-width: 970px) {
-  html {
-    overflow-x: hidden;
-  }
-}
 
 body {
   display: flex;
