@@ -333,6 +333,7 @@ h2 {
   h2 {
     width: 85%;
     margin: 20px auto;
+    padding-top: 60px;
   }
 }
 
@@ -344,6 +345,7 @@ h4 {
   h4 {
     width: 85%;
     margin: 20px auto;
+    padding-top: 60px;
   }
 }
 
@@ -468,6 +470,7 @@ body {
     position: absolute;
     top: 50px;
     width: 100vw;
+    left: 0;
   }
 }
 
@@ -480,7 +483,7 @@ main {
   main {
     width: 100vw;
     height: auto;
-    overflow: auto;
+    overflow-y: visible;
   }
 }
 
@@ -614,6 +617,9 @@ main .landing-pic {
   display: flex;
   flex-direction: column;
   margin: 40px auto;
+}
+.portfolio .wrapper h2 {
+  padding-top: 20px;
 }
 .portfolio .wrapper .img-slider {
   border: 10px solid #2c2f30;
@@ -847,6 +853,14 @@ header .title .heading .title-blob {
   flex-direction: column;
   justify-content: center;
   gap: 5%;
+}
+.contact-main h2 {
+  margin-bottom: -30px;
+}
+@media only screen and (max-width: 970px) {
+  .contact-main h2 {
+    padding-top: 30px;
+  }
 }
 .contact-main img {
   margin-left: 20%;
