@@ -474,7 +474,7 @@ body {
     background-size: 100%;
     position: absolute;
     top: 50px;
-    width: 100vw;
+    width: 100%;
     left: 0;
   }
 }
@@ -995,7 +995,7 @@ footer .wrapper p {
     left: 0;
     position: fixed;
     z-index: 1000;
-    width: 100%;
+    width: 100vw;
   }
   header nav .hamburger-btn {
     z-index: 5;
@@ -1031,7 +1031,7 @@ footer .wrapper p {
     top: 20px;
     height: calc(100vh - 20px);
     padding: 5% 0;
-    width: 100%;
+    width: 100vw;
     background-color: rgba(44, 47, 48, 0.95);
   }
   header nav .nav-list * {
