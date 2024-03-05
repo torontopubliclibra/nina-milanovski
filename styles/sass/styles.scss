@@ -73,13 +73,21 @@ main {
         flex-direction: column;
     }
 
-    &.bio-main {
+    &.about-main {
         img {
             width: 100%;
             object-fit: cover;
             max-height: 350px;
             margin-top: 30px;
             margin-bottom: 0;
+        }
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            .main-buttons {
+                order: -1;
+                margin-top: 55px;
+                margin-bottom: -20px;
+            }
         }
     }
 

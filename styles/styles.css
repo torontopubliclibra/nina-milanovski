@@ -512,13 +512,20 @@ main .wrapper {
   display: flex;
   flex-direction: column;
 }
-main.bio-main img {
+main.about-main img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   max-height: 350px;
   margin-top: 30px;
   margin-bottom: 0;
+}
+@media only screen and (max-width: 970px) {
+  main.about-main .main-buttons {
+    order: -1;
+    margin-top: 55px;
+    margin-bottom: -20px;
+  }
 }
 main .project {
   margin-top: 10px;
