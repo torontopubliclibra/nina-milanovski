@@ -449,6 +449,9 @@ html {
   position: relative;
 }
 @media only screen and (max-width: 970px) {
+  html {
+    max-width: 100vw !important;
+  }
   html.nav-open {
     overflow: hidden;
     max-height: 100vh !important;
