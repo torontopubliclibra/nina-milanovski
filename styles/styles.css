@@ -364,6 +364,14 @@ header .heading h1 {
   font-size: 2rem;
   font-weight: 400;
 }
+header .heading a {
+  text-decoration: none;
+  color: #F6F4F5;
+}
+header .heading a:hover {
+  text-decoration: none;
+  color: #F6F4F5;
+}
 header nav ul li {
   font-size: 1.15rem;
 }
@@ -647,9 +655,10 @@ main .landing-pic {
   border: 10px solid #2c2f30;
   background-color: rgba(44, 47, 48, 0.8);
   width: 100%;
+  max-width: 700px;
   margin-top: 10px;
   height: 500px;
-  aspect-ratio: 16/10;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   z-index: 2;
@@ -674,6 +683,7 @@ main .landing-pic {
 @media only screen and (max-width: 970px) {
   .portfolio .wrapper .img-slider {
     width: 90%;
+    height: 300px;
     margin: 20px auto;
     margin-bottom: 0;
   }
@@ -686,8 +696,9 @@ main .landing-pic {
   align-items: center;
   position: relative;
   width: 100%;
+  max-width: 700px;
   height: 80px;
-  margin: 0;
+  margin: 0 auto;
   padding: 25px;
   z-index: 2;
   color: #F6F4F5;
@@ -997,7 +1008,6 @@ footer .wrapper {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding-bottom: 40px;
 }
 footer .wrapper p {
   width: 100%;
