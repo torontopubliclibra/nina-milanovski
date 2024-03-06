@@ -299,9 +299,9 @@ a:hover {
 }
 
 hr {
-  background-color: rgba(44, 47, 48, 0.8);
+  background-color: rgba(134, 172, 134, 0.8);
   border-style: solid;
-  border-color: rgba(44, 47, 48, 0.8);
+  border-color: rgba(134, 172, 134, 0.8);
   height: 1px;
   width: 100%;
   box-shadow: none;
@@ -340,12 +340,15 @@ h2 {
 h4 {
   font-size: 1.4rem;
   margin: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 @media only screen and (max-width: 970px) {
   h4 {
     width: 85%;
     margin: 20px auto;
-    padding-top: 60px;
+    padding-top: 45px;
+    padding-bottom: 0;
   }
 }
 
@@ -431,6 +434,14 @@ main a:hover {
 .portfolio .credits {
   font-size: 0.9rem;
   font-weight: 600;
+}
+@media only screen and (max-width: 970px) {
+  .portfolio p, .portfolio .credits {
+    font-size: 0.8rem;
+  }
+  .portfolio h4 {
+    font-size: 1.3rem;
+  }
 }
 
 .contact-main {
@@ -643,10 +654,21 @@ main .landing-pic {
   }
 }
 
+.portfolio {
+  padding-bottom: 0;
+}
 .portfolio .wrapper {
   display: flex;
   flex-direction: column;
   margin: 40px auto;
+}
+@media only screen and (max-width: 970px) {
+  .portfolio .wrapper {
+    margin-bottom: 0;
+  }
+  .portfolio .wrapper hr {
+    margin-top: 60px;
+  }
 }
 .portfolio .wrapper h2 {
   padding-top: 20px;
@@ -996,22 +1018,26 @@ footer .social-buttons .social-button {
 footer .social-buttons .social-button img {
   max-width: 30px;
 }
-@media only screen and (max-width: 970px) {
-  footer {
-    width: 100vw;
-    position: unset;
-  }
-}
 footer .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  padding-bottom: 40px;
 }
 footer .wrapper p {
   width: 100%;
   margin: 0;
+}
+@media only screen and (max-width: 970px) {
+  footer {
+    width: 100vw;
+    position: unset;
+  }
+  footer .wrapper {
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 970px) {

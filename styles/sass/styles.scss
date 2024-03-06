@@ -210,10 +210,18 @@ main {
 }
 
 .portfolio {
+    padding-bottom: 0;
     .wrapper {
         display: flex;
         flex-direction: column;
         margin: 40px auto;
+
+        @media only screen and (max-width: $tablet) {
+            margin-bottom: 0;
+            hr {
+                margin-top: 60px;
+            }
+        }
 
         h2 {
             padding-top: 20px;
@@ -567,22 +575,27 @@ footer {
         }
     }
 
-    // responsive to tablet
-    @media only screen and (max-width: $tablet) {
-        width: 100vw;
-        position: unset;
-    }
-
     .wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
+        padding-bottom: 40px;
 
         p {
             width: 100%;
             margin: 0;
+        }
+    }
+
+    // responsive to tablet
+    @media only screen and (max-width: $tablet) {
+        width: 100vw;
+        position: unset;
+
+        .wrapper {
+            padding: 0;
         }
     }
 }
