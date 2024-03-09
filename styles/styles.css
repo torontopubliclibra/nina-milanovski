@@ -558,6 +558,9 @@ main.about-main img {
     margin-top: 55px;
     margin-bottom: -20px;
   }
+  main.about-main img {
+    margin-top: 80px;
+  }
 }
 main .project {
   margin-top: 10px;
@@ -677,8 +680,7 @@ main .landing-pic {
   padding-top: 20px;
 }
 .portfolio .wrapper .img-slider {
-  border: 10px solid #2c2f30;
-  background-color: rgba(44, 47, 48, 0.8);
+  border: 10px solid rgba(44, 47, 48, 0.9);
   width: 100%;
   max-width: 700px;
   margin-top: 10px;
@@ -715,7 +717,7 @@ main .landing-pic {
 }
 .portfolio .wrapper .img-textbox {
   border-left: none;
-  background-color: #2c2f30;
+  background-color: rgba(44, 47, 48, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -939,7 +941,7 @@ header .title .heading .title-blob {
 }
 .contact-main form {
   transform: translateY(-40px);
-  background-color: rgba(44, 47, 48, 0.8);
+  background-color: rgba(44, 47, 48, 0.9);
   padding: 40px 20px;
   margin-top: 20px;
   margin-bottom: 40px;
