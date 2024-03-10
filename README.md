@@ -1,7 +1,7 @@
 # Nina Milanovski
 
 ## About
-This is a portfolio website for Nina Milanovski, dance artist and producer. I built the site with jQuery, HTML, and SCSS in February 2024.
+This is a portfolio website for Nina Milanovski, dance artist and producer, designed and developed by [Dana Teagle](https://danateagle.com). The site is built with jQuery, HTML, and SCSS, and was launched in March 2024.
 
 ## Attributions
 - [jQuery v3.7.0](https://jquery.com/)
