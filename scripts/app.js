@@ -8,6 +8,7 @@ let app = {
         nav: $("nav"),
     },
 
+    // project 1 values
     project_1: {
         id: 1,
         currentSlide: 0,
@@ -18,6 +19,7 @@ let app = {
         prevSlide: document.querySelector(".project-1 .img-textbox .img-nav.prev"),
     },
 
+    // project 2 values
     project_2: {
         id: 2,
         currentSlide: 0,
@@ -27,6 +29,8 @@ let app = {
         nextSlide: document.querySelector(".project-2 .img-textbox .img-nav.next"),
         prevSlide: document.querySelector(".project-2 .img-textbox .img-nav.prev"),
     },
+
+    // project 3 values
     project_3: {
         id: 3,
         currentSlide: 0,
@@ -36,6 +40,8 @@ let app = {
         nextSlide: document.querySelector(".project-3 .img-textbox .img-nav.next"),
         prevSlide: document.querySelector(".project-3 .img-textbox .img-nav.prev"),
     },
+
+    // project 4 values
     project_4: {
         id: 4,
         currentSlide: 0,
@@ -136,21 +142,25 @@ let app = {
         // on the nav button click, toggle the nav
         app.elements.nav.click(app.functions.toggleNav);
 
+        // project 1 image carousel event listeners
         if (app.project_1.maxSlide > 0) {
             app.project_1.prevSlide.addEventListener('click', () => app.functions.prevSlideFunction(1));
             app.project_1.nextSlide.addEventListener('click', () => app.functions.nextSlideFunction(1));
         }
 
+        // project 2 image carousel event listeners
         if (app.project_2.maxSlide > 0) {
             app.project_2.prevSlide.addEventListener('click', () => app.functions.prevSlideFunction(2));
             app.project_2.nextSlide.addEventListener('click', () => app.functions.nextSlideFunction(2));
         }
 
+        // project 3 image carousel event listeners
         if (app.project_3.maxSlide > 0) {
             app.project_3.prevSlide.addEventListener('click', () => app.functions.prevSlideFunction(3));
             app.project_3.nextSlide.addEventListener('click', () => app.functions.nextSlideFunction(3));
         }
 
+        // project 4 image carousel event listeners
         if (app.project_4.maxSlide > 0) {
             app.project_4.prevSlide.addEventListener('click', () => app.functions.prevSlideFunction(4));
             app.project_4.nextSlide.addEventListener('click', () => app.functions.nextSlideFunction(4));
@@ -161,16 +171,17 @@ let app = {
     // app initializion
     init: () => {
 
+        // set the current slide and max slide values
         app.project_1.currentSlide = 0,
         app.project_2.currentSlide = 0,
         app.project_3.currentSlide = 0,
         app.project_4.currentSlide = 0,
-
         app.project_1.maxSlide = app.project_1.slides.length - 1,
         app.project_2.maxSlide = app.project_2.slides.length - 1,
         app.project_3.maxSlide = app.project_3.slides.length - 1,
         app.project_4.maxSlide = app.project_4.slides.length - 1,
 
+        // loop through the project 1 image carousels
         app.project_1.slides.forEach((slide, index) => {
 
             // place the images end to end on the page
@@ -183,6 +194,7 @@ let app = {
             slide.style.display = `block`;
         });
 
+        // loop through the project 2 image carousels
         app.project_2.slides.forEach((slide, index) => {
 
             // place the images end to end on the page
@@ -195,6 +207,7 @@ let app = {
             slide.style.display = `block`;
         });
 
+        // loop through the project 3 image carousels
         app.project_3.slides.forEach((slide, index) => {
 
             // place the images end to end on the page
@@ -207,6 +220,7 @@ let app = {
             slide.style.display = `block`;
         });
 
+        // loop through the project 4 image carousels
         app.project_4.slides.forEach((slide, index) => {
 
             // place the images end to end on the page
@@ -219,7 +233,7 @@ let app = {
             slide.style.display = `block`;
         });
 
-        // update slide text to current slide
+        // update all slide text to current slides
         app.functions.changeSlideText(1);
         app.functions.changeSlideText(2);
         app.functions.changeSlideText(3);

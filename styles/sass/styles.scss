@@ -3,6 +3,7 @@
 @use 'partials/variables' as *;
 @use 'partials/typography' as *;
 
+// default styles
 html {
     position: relative;
 
@@ -47,7 +48,192 @@ body {
     }
 }
 
+// input styles
+input, textarea {
+    background-color: $black;
+    border: none;
+    padding: 10px 15px;
+}
+textarea {
+    height: 150px;
+}
+
+// wrapper styles
+.wrapper {
+    max-width: 1260px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+// button styles
+.button {
+    font-style: normal;
+    background-color: $color2;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s, font-style 0.5s, transform 0.5s;
+    &:hover {
+        color: $black;
+        transform: skew(-5deg);
+        background-color: $color1;
+        text-decoration: none;
+    }
+    @media only screen and (max-width: $tablet) {
+        transform: skew(-3deg);
+        font-style: italic;
+        &:hover {
+            transform: skew(-3deg);
+            font-style: italic;
+            background-color: $color2;
+        }
+    }
+}
+
+// header styles
+header {
+    background-color: rgba($color2, 0.5);
+    width: 400px;
+    height: 100vh;
+
+    // responsive to tablet
+    @media only screen and (max-width: $tablet) {
+        background-color: rgba($black, 0.5);
+        width: 100vw;
+        height: 200px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        width: 80%;
+        max-width: 1200px;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        .hamburger-btn {
+            display: none;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 35px;
+            margin: 0;
+            padding: 0;
+            margin-top: 35px;
+                li {
+                    a {
+                        padding: 5px;
+                        border-bottom: solid 2px $white;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: line-through;
+                            transition: text-decoration 0.75s;
+                        }
+                    }
+                    .current {
+                        padding: 5px;
+                        border-bottom: solid 2px $color2;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    .title {
+        position: relative;
+        padding: 35px 0;
+        padding-bottom: 30px;
+        min-width: 100%;
+
+        .heading {
+            h1 {
+                position: relative;
+                margin-top: 0;
+                z-index: 100;
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    margin: 0 15px;
+                    z-index: 1;
+                }
+            }
+            .title-blob {
+                transform: rotate(-70deg) scale(1.75);
+                width: 90%;
+                opacity: 60%;
+                position: absolute;
+                top: -110px;
+                z-index: 0;
+                animation: none;
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    transform: rotate(-70deg) scale(1.75);
+                    width: 450px;
+                    top: -225px;
+                    left: -100px;
+                }
+            }
+        }
+    }
+}
+
+// footer styles
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 400px;
+
+    .social-buttons {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        .social-button {
+            display: flex;
+            padding: 10px;
+            width: 50px;
+            img {
+                max-width: 30px;
+            }
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 40px;
+
+        p {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    // responsive to tablet
+    @media only screen and (max-width: $tablet) {
+        width: 100vw;
+        position: unset;
+
+        .wrapper {
+            padding: 0;
+        }
+    }
+}
+
+// default main styles
 main {
+    background-color: rgba($white, 0.75);
+    color: $black;
+    margin: 0;
+    padding-bottom: 30px;
     width: calc(100vw - 400px);
     height: 100vh;
     overflow-y: scroll;
@@ -59,23 +245,6 @@ main {
         height: fit-content;
         overflow-y: visible;
     }
-}
-
-input, textarea {
-    background-color: $black;
-    border: none;
-    padding: 10px 15px;
-}
-
-textarea {
-    height: 150px;
-}
-
-main {
-    background-color: rgba($white, 0.75);
-    color: $black;
-    margin: 0;
-    padding-bottom: 30px;
 
     .wrapper {
         display: flex;
@@ -213,6 +382,7 @@ main {
     }
 }
 
+// portfolio styles
 .portfolio {
     padding-bottom: 0;
     .wrapper {
@@ -339,129 +509,7 @@ main {
     }
 }
 
-// wrapper styles
-.wrapper {
-    max-width: 1260px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-// button styles
-.button {
-    font-style: normal;
-    background-color: $color2;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: color 0.5s, background-color 0.5s, font-style 0.5s, transform 0.5s;
-    &:hover {
-        color: $black;
-        transform: skew(-5deg);
-        background-color: $color1;
-        text-decoration: none;
-    }
-    @media only screen and (max-width: $tablet) {
-        transform: skew(-3deg);
-        font-style: italic;
-        &:hover {
-            transform: skew(-3deg);
-            font-style: italic;
-            background-color: $color2;
-        }
-    }
-}
-
-// header styles
-header {
-    background-color: rgba($color2, 0.5);
-    width: 400px;
-    height: 100vh;
-
-    // responsive to tablet
-    @media only screen and (max-width: $tablet) {
-        background-color: rgba($black, 0.5);
-        width: 100vw;
-        height: 200px;
-    }
-
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-    nav {
-        width: 80%;
-        max-width: 1200px;
-        top: 0;
-        right: 0;
-        z-index: 100;
-        .hamburger-btn {
-            display: none;
-        }
-        ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 35px;
-            margin: 0;
-            padding: 0;
-            margin-top: 35px;
-                li {
-                    a {
-                        padding: 5px;
-                        border-bottom: solid 2px $white;
-                        text-decoration: none;
-                        &:hover {
-                            text-decoration: line-through;
-                            transition: text-decoration 0.75s;
-                        }
-                    }
-                    .current {
-                        padding: 5px;
-                        border-bottom: solid 2px $color2;
-                        text-decoration: line-through;
-                    }
-                }
-            }
-        }
-    .title {
-        position: relative;
-        padding: 35px 0;
-        padding-bottom: 30px;
-        min-width: 100%;
-
-        .heading {
-            h1 {
-                position: relative;
-                margin-top: 0;
-                z-index: 100;
-
-                // responsive to tablet
-                @media only screen and (max-width: $tablet) {
-                    margin: 0 15px;
-                    z-index: 1;
-                }
-            }
-            .title-blob {
-                transform: rotate(-70deg) scale(1.75);
-                width: 90%;
-                opacity: 60%;
-                position: absolute;
-                top: -110px;
-                z-index: 0;
-                animation: none;
-
-                // responsive to tablet
-                @media only screen and (max-width: $tablet) {
-                    transform: rotate(-70deg) scale(1.75);
-                    width: 450px;
-                    top: -225px;
-                    left: -100px;
-                }
-            }
-        }
-    }
-}
-
+// contact styles
 .contact-main {
     padding-bottom: 0;
     .wrapper {
@@ -557,57 +605,13 @@ header {
     }
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    width: 400px;
-
-    .social-buttons {
-        width: 100%;
-        display: flex;
-        gap: 20px;
-        margin-bottom: 20px;
-        .social-button {
-            display: flex;
-            padding: 10px;
-            width: 50px;
-            img {
-                max-width: 30px;
-            }
-        }
-    }
-
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        padding-bottom: 40px;
-
-        p {
-            width: 100%;
-            margin: 0;
-        }
-    }
-
-    // responsive to tablet
-    @media only screen and (max-width: $tablet) {
-        width: 100vw;
-        position: unset;
-
-        .wrapper {
-            padding: 0;
-        }
-    }
-}
-
-// screens smaller than $tablet
+// screens smaller than tablet
 @media only screen and (max-width: $tablet) {
     .wrapper {
         width: 100%;
     }
+
+    // tablet header styles
     header {
         nav {
             left: 0;
@@ -704,6 +708,8 @@ footer {
             margin-top: 30px;
         }
     }
+    
+    // tablet footer styles
     footer {
         margin: 40px 20px;
     }

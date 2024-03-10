@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
     <!-- metadata-->
     <title>Nina Milanovski // Contact</title>
@@ -44,101 +44,110 @@
     <!-- styles import -->
     <link rel="stylesheet" href="./styles/styles.css" />
 
-</head>
+  </head>
 
-
-<body>
+  <body>
 
     <!-- header section-->
     <header>
-        <div class="wrapper"> 
-  
-          <!-- title section -->
-          <div class="title">
-            <div class="heading">
-              <img src="./assets/icons/blob.svg" class="title-blob" alt="A green blob shape">
-              <h1><a href="/">Nina Milanovski</a></h1>
-            </div>
-          </div>
-  
-          <!-- nav section -->
-          <nav>
-            <!-- mobile hamburger nav button -->
-            <div class="hamburger-btn">
-              <button aria-label="Click to open navigation">
-                <img src="./assets/icons/menu-lines.svg" class="menu-icon" alt="mobile menu icon">
-              </button>
-            </div>
-            
-            <!-- pages list -->
-            <ul class="nav-list">
-                <li><a href="./">Home</a></li>
-                <li><a href="./about">About</a></li>
-                <li><a href="./portfolio">Portfolio</a></li>
-                <li><span class="current">Contact</span></li>
-            </ul class="nav-list">
-          </nav>
-  
-        </div>
-      </header>
+      <div class="wrapper"> 
 
-    <main class="contact-main">
-        <div class="wrapper">
-          <h2>Contact</h2>
-          <img src="assets/nina-3.webp" alt="Nina Milanovski photo" class="landing-pic">
-          <p class="contact-text">
-            Stay in touch! Please feel free to contact me via the form below or by email at <a href="mailto:hello@ninamilanovski.com" target="_blank">hello@ninamilanovski.com</a>.
-            <br/>
-            <br/>
-            Talk soon!
-          </p>
-          <form name="contact" method="POST" data-netlify="true" action="">
-            <fieldset>
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required="required" aria-required="true"
-                    title="Please enter your name" />
-                <label for="pronouns">Pronouns</label>
-                <input type="text" name="pronouns" id="pronouns" placeholder="e.g., she/her, they/them, he/him"
-                    required="required" aria-required="true" title="Please enter your pronouns" />
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required="required" aria-required="true"
-                    title="Please enter your email" />
-                <label for="message">Message</label>
-                <textarea name="message" id="message" required="required" aria-required="true"
-                    title="Please enter your message"></textarea>
-                <p>All fields required.</p>
-                <div class="submit-button">
-                    <button type="submit" class="button">Submit</button>
-                </div>
-            </fieldset>
-          </form>
+        <!-- title section -->
+        <div class="title">
+          <div class="heading">
+            <img src="./assets/icons/blob.svg" class="title-blob" alt="A green blob shape">
+            <h1><a href="/">Nina Milanovski</a></h1>
+          </div>
         </div>
+
+        <!-- nav section -->
+        <nav>
+          <!-- mobile hamburger nav button -->
+          <div class="hamburger-btn">
+            <button aria-label="Click to open navigation">
+              <img src="./assets/icons/menu-lines.svg" class="menu-icon" alt="mobile menu icon">
+            </button>
+          </div>
+          
+          <!-- pages list -->
+          <ul class="nav-list">
+              <li><a href="./">Home</a></li>
+              <li><a href="./about">About</a></li>
+              <li><a href="./portfolio">Portfolio</a></li>
+              <li><span class="current">Contact</span></li>
+          </ul class="nav-list">
+        </nav>
+
+      </div>
+    </header>
+
+    <!-- main section -->
+    <main class="contact-main">
+      <div class="wrapper">
+
+        <h2>Contact</h2>
+
+        <!-- banner image -->
+        <img src="assets/nina-3.webp" alt="Nina Milanovski photo" class="landing-pic">
+
+        <!-- contact page text -->
+        <p class="contact-text">
+          Stay in touch! Please feel free to contact me via the form below or by email at <a href="mailto:hello@ninamilanovski.com" target="_blank">hello@ninamilanovski.com</a>.
+          <br/>
+          <br/>
+          Talk soon!
+        </p>
+
+        <!-- contact form -->
+        <form name="contact" method="POST" data-netlify="true" action="">
+          <fieldset>
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required="required" aria-required="true"
+                  title="Please enter your name" />
+              <label for="pronouns">Pronouns</label>
+              <input type="text" name="pronouns" id="pronouns" placeholder="e.g., she/her, they/them, he/him"
+                  required="required" aria-required="true" title="Please enter your pronouns" />
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required="required" aria-required="true"
+                  title="Please enter your email" />
+              <label for="message">Message</label>
+              <textarea name="message" id="message" required="required" aria-required="true"
+                  title="Please enter your message"></textarea>
+              <p>All fields required.</p>
+              <div class="submit-button">
+                  <button type="submit" class="button">Submit</button>
+              </div>
+          </fieldset>
+        </form>
+      </div>
     </main>
 
     <!-- footer section -->
     <footer>
-        <div class="wrapper">
+      <div class="wrapper">
 
-          <div class="social-buttons">
-            <a href="https://instagram.com/ninamilanovski" target="_blank" rel="noreferrer" class="button social-button">
-              <img src="./assets/icons/instagram.svg" alt="Instagram icon">
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100069169032714" target="_blank" rel="noreferrer" class="button social-button">
-              <img src="./assets/icons/facebook.svg" alt="Facebook icon">
-            </a>
-          </div>
-  
-          <p>© Nina Milanovski, 2024</p>
-          <p>Website designed by <a href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Teagle</a>
-          </p>
-  
-        </div> <!-- wrapper end -->
+        <!-- social buttons -->
+        <div class="social-buttons">
+          <a href="https://instagram.com/ninamilanovski" target="_blank" rel="noreferrer" class="button social-button">
+            <img src="./assets/icons/instagram.svg" alt="Instagram icon">
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100069169032714" target="_blank" rel="noreferrer" class="button social-button">
+            <img src="./assets/icons/facebook.svg" alt="Facebook icon">
+          </a>
+        </div>
+
+        <!-- credit text -->
+        <p>© Nina Milanovski, 2024</p>
+        <p>Website designed by <a href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Teagle</a>
+        </p>
+
+      </div>
     </footer>
 
     <!-- script imports -->
     <script src="./scripts/jquery-3.7.0.min.js" type="text/javascript"></script>
     <script src="./scripts/app.js" type="text/javascript"></script>
 
-</body>
+  </body>
 
 </html>
