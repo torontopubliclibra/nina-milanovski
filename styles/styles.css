@@ -459,9 +459,15 @@ main a:hover {
 }
 
 footer {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-family: "B612-Mono-Regular", monospace;
   font-weight: 400;
+  line-height: 1.25;
+}
+@media only screen and (max-width: 970px) {
+  footer {
+    font-size: 1rem;
+  }
 }
 
 html {
@@ -665,6 +671,9 @@ footer .wrapper {
 footer .wrapper p {
   width: 100%;
   margin: 0;
+}
+footer .wrapper p span.copyright {
+  font-size: 40px !important;
 }
 @media only screen and (max-width: 970px) {
   footer {
